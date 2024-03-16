@@ -73,4 +73,13 @@ contract blockRental {
         }
         return rentalArray;
     }
+
+// Return the car 
+
+    function returnCar (uint carID) public returns (bool){
+        Car storage returncar = cars[carID];
+        returncar.isAvailable = true;
+        return true;
+    }
 }
+
